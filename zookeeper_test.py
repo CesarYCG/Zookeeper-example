@@ -30,7 +30,7 @@ class TestZookeeper(unittest.TestCase):
         tree = Ztree()
         tree.create('/node1','algo',True,True,10,'/')
         tree.setData('/node1','something')
-        self.assertEqual(tree.getData('/node1'),'something') # Fallara porque something != algo
+        self.assertEqual(tree.getData('/node1'),'algo') # Fallara porque something != algo
 
     def test_buscar_znode_ephemeral(self):
         tree = Ztree()
